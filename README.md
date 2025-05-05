@@ -1,29 +1,40 @@
 # CFA Analytics Induction Task 2025
 ## Overview
-The goal of the project is to conduct exploratory data analysis (EDA) on a given IPL Auction Dataset. The dataset, after cleaning, was manipulated to extract underlying patterns and insights, which are visualised by graphical methods where possible. The EDA project also contains ML techniques such as KMC and Linear Regression.
+This project presents an exploratory data analysis (EDA) of an IPL Auction dataset, as part of the CFA Analytics Induction Task for 2025. The analysis aims to uncover meaningful insights and trends within the dataset through data cleaning, statistical exploration, and visualization. The final deliverable includes not only EDA techniques but also an introduction to machine learning methods such as K-Means Clustering (KMC) and Linear Regression.
 
-## File Structure
+## Repository Structure
 The GitHub Repository contains the following key files
-- `final_dataset.csv`: The raw dataset provided by the CFA Club
-- `edaNotebook.ipnyb`: A systematic JupyterNB containing steps from the EDA
-- `prelim.ipynb`: A rough JupyterNB containing a preliminary and unstructured attempt at EDA
-- `240005009_EDAReport_ArhamAneeq.pdf`: A PDF report consisting of more structured insights into the data and patterns underlying it
+- `final_dataset.csv`: The raw dataset provided by the CFA Club, uncleaned
+- `edaNotebook.ipnyb`: A well-organized Jupyter notebook that systematically presents the EDA process. It includes the code used to generate statistics and visualizations referenced in the final report.
+- `prelim.ipynb`: An exploratory notebook capturing early-stage, unstructured analysis. While less readable and loosely organized, it contains numerous experimental visualizations (e.g., Waffle Charts, Network Graphs) and a Random Forest model that were ultimately excluded from the final report.
+- `240005009_EDAReport_ArhamAneeq.pdf`: A formal report summarizing key findings, visual insights, and interpretation. This document serves as the primary reference for the final analysis.
 
-The main file here is the PDF, including most of the final result of the EDA with my understanding of the dataset. The JupyterNB `edaNotebook.ipynb` consists of code which generated most of the statistics and visuals present in the PDF, and is well structured with headings and relatively readable code.
+The primary deliverable is the PDF report, which consolidates the final insights. The `edaNotebook.ipynb` supports it with reproducible code and visuals, while `prelim.ipynb` documents the exploratory journey and alternative modeling attempts.
 
-The `prelim.ipynb` lacks clear structure, but includes far more graphs and statistics than present in either of the other two files. It includes attempts at further methods of data visualisation, such as Waffle Charts or Network Graphs, and also an ML model known as Random Forests, all of which I deemed not fit for inclusion in the the final files. The code in this notebook is also less readable, and consists of frankly horrendous uses of lambdas and hodgepodge programming.
+## Key Principles
 
-## Requirements
+- `Exploratory Data Analysis`: A structured approach to identifying patterns, anomalies, and relationships in raw auction data.
+- `Data Cleaning & Transformation`: Null handling, feature engineering, and dataset reshaping to ensure analytical robustness.
+- `Statistical visualisation`: Insightful graphical summaries using bar plots, heatmaps, pair plots, and custom visual styles.
+- `Machine Learning Integration`: Application of clustering and regression models to quantify trends and predictive patterns.
+- `Analytical Reporting`: A concise yet comprehensive report that integrates findings, visual evidence, and interpretation.
+
+### Features
+- Cleaned and structured dataset with standardised player and team metadata.
+- Rich data visualisation including price distributions, roll-wise trends, and team level comparisons.
+- K-Means Clustering and Principal Component Analysis to explore multivariate relationships between player attributes and auction price.
+
+## Dependencies
 
 To run the analysis, you will need to the following Python Libraries
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `scipy`
-- `sklearn`
-- `scikit_posthocs`
-- `networkx` (optional)
-- `pywaffle` (optional)
+- `pandas`, `numpy`, `scipy`: data manipulation & statistical inference
+- `matplotlib`, `seaborn`, `pywaffle`, `networkx` - visualisation (`pywaffle` and `networkx` are optional)
+- `scikit-learn`, `scikit-posthocs` - machine learning & post-hoc testing
 
-You will need Jupyter to run the notebooks.
+The Analysis is designed to be run in a `Jupyter` Notebook.
+
+
+### Notes
+
+- The project reflects both the structured analytical process and the underlying iterative experimentation inherent to data analytics.
+- Optional dependencies were used for experimental visualisation and are not required to reproduce the main results.
